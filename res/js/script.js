@@ -40,11 +40,17 @@ $(function () {
     $("#profile-button").click(function () {
         $("#courses-container").hide();
         $("#profile-container").show();
+
+        $("#profile-button").toggleClass("active");
+        $("#courses-button").toggleClass("active");
     });
 
     $("#courses-button").click(function () {
         $("#profile-container").hide();
         $("#courses-container").show();
+        
+        $("#profile-button").toggleClass("active");
+        $("#courses-button").toggleClass("active");
     });
 
     $("#add-course-button").click(function () {
