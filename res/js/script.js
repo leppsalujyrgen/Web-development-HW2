@@ -9,6 +9,8 @@ $(function () {
                 index += 1;
             }
         )
+
+        $("#gpa strong").text(user.getGpa());
     }
 
     let courses = [
