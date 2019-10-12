@@ -1,9 +1,9 @@
 class Course {
 
-    constructor(title, semester, grade) {
+    constructor(title, semester, gradePoints) {
         this._title = title;
         this._semester = semester;
-        this._grade = grade;
+        this._gradePoints = gradePoints;
     }
 
     getTitle() {
@@ -14,8 +14,8 @@ class Course {
         return this._semester;
     }
 
-    getGrade() {
-        return this._grade;
+    getGradePoints() {
+        return this._gradePoints;
     }
 
 }
