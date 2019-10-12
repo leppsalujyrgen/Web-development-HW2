@@ -15,14 +15,20 @@ $(function () {
     $("#gpa strong").text(user.getGpa());
 
     $("#profile-button").click(function () {
-        console.log("Profile button pressed.");
         $("#courses-container").hide();
         $("#profile-container").show();
     });
 
     $("#courses-button").click(function () {
-        console.log("Courses button pressed.");
         $("#profile-container").hide();
         $("#courses-container").show();
     });
+
+    $("#add-course-button").click(function () {
+        if($("#add-course").css("display") === "none")
+            $("#add-course").css({"display": "inline"});
+        else
+            $("#add-course").css({"display" : "none"});
+    });
+
 });
