@@ -1,14 +1,14 @@
 $(function () {
 
     function updateCourses(user) {
-        $("#courses tr").remove(); // Empty table, since we are updating every course.
+        $("#courses tbody tr").remove(); // Empty table, since we are updating every course.
         let courses = user.getCourses();
         courses.forEach(course =>  addCourse(course));
     }
 
     function addCourse(course) {
         let table = $("#courses");
-        let index = $("#courses tr").length;
+        let index = $("#courses tbody tr").length + 1;
 
         table.append(`<tr><td>${index}</td><td>${course.getTitle()}</td><td>${course.getSemester()}</td><td>${course.getGradePoints()}</td></tr>`);
         $("#gpa strong").text(user.getGpa());
