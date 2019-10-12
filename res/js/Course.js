@@ -1,10 +1,4 @@
-class Person {
-
-    constructor(title, semester) {
-        this._title = title;
-        this._semester = semester;
-        this._grade = "N/A";
-    }
+class Course {
 
     constructor(title, semester, grade) {
         this._title = title;
@@ -12,20 +6,16 @@ class Person {
         this._grade = grade;
     }
 
-
-    get title() {
+    getTitle() {
         return this._title;
     }
 
-    get semester() {
+    getSemester() {
         return this._semester;
     }
 
-    get grade() {
+    getGrade() {
         return this._grade;
     }
 
-    set grade(value) {
-        this._grade = value;
-    }
 }

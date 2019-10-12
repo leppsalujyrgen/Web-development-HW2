@@ -1,39 +1,31 @@
 class User{
 
-    constructor(firstName, lastName, birthday, faculty) {
-        this.gpa = 0;
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.birthday = birthday;
-        this.faculty = faculty;
+    constructor(firstName, lastName, birthday, faculty, gpa) {
+        this._gpa = gpa;
+        this._firstName = firstName;
+        this._lastName = lastName;
+        this._birthday = birthday;
+        this._faculty = faculty;
+    }
+
+    getFirstName() {
+        return this._firstName
     }
 
 
-    get firstName() {
-        return this.firstName;
+    getLastName() {
+        return this._lastName;
     }
 
-    get lastName() {
-        return this.lastName;
+    getBirthday() {
+        return this._birthday;
     }
 
-    get birthday() {
-        return this.birthday;
+    getFaculty() {
+        return this._faculty;
     }
 
-    get faculty() {
-        return this.faculty;
-    }
-
-    set faculty(value) {
-        this.faculty = value;
-    }
-
-    get gpa() {
-        return this.gpa;
-    }
-
-    set gpa(value) {
-        this.gpa = value;
+    getGpa() {
+        return this._gpa;
     }
 }
