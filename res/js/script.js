@@ -54,6 +54,11 @@ $(function () {
             $("#add-course").css({"display": "none"});
     });
 
+    $("#cancel-course").click(function() {
+        $("#add-course").css({"display": "none"});
+        clearNewCourseForm();
+    })
+
     updateCourses(user, "courses")
 
 });
