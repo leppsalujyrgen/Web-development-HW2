@@ -13,6 +13,12 @@ $(function () {
         $("#gpa strong").text(user.getGpa());
     }
 
+    function clearNewCourseForm() {
+        $("#title").val("");
+        $("#semester").val("");
+        $("#grade").val("");
+    }
+
     let courses = [
         new Course("Agile software development", 1, 82),
         new Course("System modeling", 1, 85),
