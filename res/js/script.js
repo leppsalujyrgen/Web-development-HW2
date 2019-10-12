@@ -1,6 +1,6 @@
 $(function () {
 
-    function updateCourses(user, tableId) {
+    function updateCourses(user) {
         let courses = user.getCourses();
         let table = $("#courses");
         let index = $("#courses tr").length;
