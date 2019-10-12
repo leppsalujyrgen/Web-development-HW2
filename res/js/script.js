@@ -1,15 +1,16 @@
 $(function () {
 
     function updateCourses(user) {
+        $("#courses tr").remove(); // Empty table, since we are updating every course.
         let courses = user.getCourses();
+        courses.forEach(course =>  addCourse(course));
+    }
+
+    function addCourse(course) {
         let table = $("#courses");
         let index = $("#courses tr").length;
-        courses.forEach(course => {
-                table.append(`<tr><td>${index}</td><td>${course.getTitle()}</td><td>${course.getSemester()}</td><td>${course.getGradePoints()}</td></tr>`);
-                index += 1;
-            }
-        )
 
+        table.append(`<tr><td>${index}</td><td>${course.getTitle()}</td><td>${course.getSemester()}</td><td>${course.getGradePoints()}</td></tr>`);
         $("#gpa strong").text(user.getGpa());
     }
 
@@ -48,7 +49,7 @@ $(function () {
     $("#courses-button").click(function () {
         $("#profile-container").hide();
         $("#courses-container").show();
-        
+
         $("#profile-button").toggleClass("active");
         $("#courses-button").toggleClass("active");
     });
