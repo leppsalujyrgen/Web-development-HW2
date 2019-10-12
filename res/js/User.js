@@ -57,4 +57,10 @@ class User{
 
         return Math.round(pointsSum / courses.length * 100) / 100;
     }
+
+    addCourse(title, semester, gradePoints) {
+        if (title.length > 0 && semester > null && gradePoints >= 0 && gradePoints <= 100) {
+            this._courses.append(new Course(title, semester, gradePoints))
+        }
+    }
 }
