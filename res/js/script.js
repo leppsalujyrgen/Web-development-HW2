@@ -43,10 +43,12 @@ $(function () {
 		var title = $("#title").val();
 		var semester = $("#semester").val();
 		var grade = $("#grade").val();
+		user.addCourse(title, semester, grade);
 		$('#courses').append('<tr><td>' + index1 + '</td><td>' + title + '</td><td>' + semester + '</td><td>' + grade +'</td></tr>');
 		index1++;   
 		$("#add-course").css({"display": "none"});
         clearNewCourseForm();
+		$("#gpa strong").text(user.getGpa());
 	});
 
     $("#profile-button").click(function () {

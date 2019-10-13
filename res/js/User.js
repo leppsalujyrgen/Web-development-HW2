@@ -31,7 +31,7 @@ class User{
     }
 
     getGpa() {
-        return this._gpa;
+        return this.calculateGPA();
     }
 
     calculateGPA() {
@@ -59,8 +59,8 @@ class User{
     }
 
     addCourse(title, semester, gradePoints) {
-        if (title.length > 0 && semester > null && gradePoints >= 0 && gradePoints <= 100) {
-            this._courses.append(new Course(title, semester, gradePoints))
+        if (title.length > 0 && semester != null && gradePoints >= 0 && gradePoints <= 100) {
+            this._courses.push(new Course(title, semester, gradePoints))
         }
     }
 }
