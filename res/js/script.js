@@ -37,6 +37,17 @@ $(function () {
     $("#birthdate").text(user.getBirthday());
     $("#faculty").text(user.getFaculty());
     $("#gpa strong").text(user.getGpa());
+	//var index1 = 5
+	$("#save-course").click(function(){
+		let index1 = $("#courses tbody tr").length + 1;
+		var title = $("#title").val();
+		var semester = $("#semester").val();
+		var grade = $("#grade").val();
+		$('#courses').append('<tr><td>' + index1 + '</td><td>' + title + '</td><td>' + semester + '</td><td>' + grade +'</td></tr>');
+		index1++;   
+		$("#add-course").css({"display": "none"});
+        clearNewCourseForm();
+	});
 
     $("#profile-button").click(function () {
         $("#courses-container").hide();
